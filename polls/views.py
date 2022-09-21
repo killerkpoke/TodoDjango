@@ -16,7 +16,7 @@ def add_todo(request):
     if request.POST["content"]:
         content = request.POST["content"]
         Todo.objects.create(added_date=current_date, text = content)
-        length_of_todos = Todo.objects.all().count()
+       #length_of_todos = Todo.objects.all().count()
     
         return HttpResponseRedirect("/")
     else:
